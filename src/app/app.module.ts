@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SrgNavbarComponent } from './srg-navbar/srg-navbar.component';
+import { SrgAboutComponent } from './srg-about/srg-about.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SrgNavbarComponent
+    SrgNavbarComponent,
+    SrgAboutComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
