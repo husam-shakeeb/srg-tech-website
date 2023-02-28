@@ -6,7 +6,6 @@ on:
 env:
   GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,4 +14,4 @@ jobs:
       with:
        token: ${{ secrets.ACCESS_TOKEN }}
     - run: npm ci
-    - run: npx ng deploy --base-href=/srg-tech-website/ --no-silent
+    - run: npx ng deploy --repo=https://github.com/husam-shakeeb/srg-tech-website.git
