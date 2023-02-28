@@ -13,4 +13,4 @@ jobs:
     - run: git config --global user.email "mohamed-rami.mezghani@hsrw.org"   
     - run: git config --global user.name "MRami153"
     - run: npm ci
-    - run: npx ng deploy --base-href=https://husam-shakeeb.github.io/srg-tech-website/ --no-silent
+    - run: npx ng deploy --base-href=git@github.com:husam-shakeeb/srg-tech-website.git --no-silent
