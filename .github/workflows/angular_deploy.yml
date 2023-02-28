@@ -14,4 +14,4 @@ jobs:
       with:
        token: ${{ secrets.ACCESS_TOKEN }}
     - run: npm ci
-    - run: npx ng deploy --repo=https://github.com/husam-shakeeb/srg-tech-website.git --no-silent
+    - run: npx ng deploy --repo=https://github.com/husam-shakeeb/srg-tech-website.git --name="MRami153" --email=mohamed-rami.mezghani@hsrw.org --no-silent
