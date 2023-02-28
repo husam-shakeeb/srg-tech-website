@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: npm ci
-    - run: ng deploy --base-href=https://husam-shakeeb.github.io/srg-tech-website/
+    - run: npx ng deploy --base-href=https://husam-shakeeb.github.io/srg-tech-website/
