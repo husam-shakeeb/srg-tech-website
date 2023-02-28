@@ -4,7 +4,7 @@ on:
     branches:
       - some-branch
 env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
 jobs:
@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-       token: ${{ secrets.GH_TOKEN }}
+       token: ${{ secrets.GITHUB_TOKEN }}
     - run: npm ci
     - run: npx ng deploy --base-href=/srg-tech-website/ --no-silent
