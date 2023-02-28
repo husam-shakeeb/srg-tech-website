@@ -1,0 +1,16 @@
+.nav-link:active {
+	color:#FF1616;
+}
+
+.nav-link:hover .red-bar {
+	text-decoration: overline 2px #FF1616;
+}
+
+@media screen and (min-width: 992px) {
+	.nav-link {
+		border: 2px solid transparent;
+	}
+	.nav-link:active {
+		color:black;
+	}
+}

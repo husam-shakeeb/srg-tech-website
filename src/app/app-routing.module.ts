@@ -9,7 +9,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 
 const routes: Routes = [
   { path: 'about', component: SrgAboutComponent },
-  { path: 'home', component: HomeComponent },
+  // { path: 'home', component: HomeComponent },//
   { path: 'technologies', component: TechnologiesComponent },
   { path: 'catalog', component: CatalogComponent },
   { path: 'contact', component: ContactComponent },
