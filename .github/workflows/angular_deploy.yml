@@ -9,4 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: npm ci
+    - run: git config --global user.email "srg@srg-tech.com"
+    - run: git config --global user.name "srg-tech"
     - run: npx ng deploy --base-href=https://husam-shakeeb.github.io/srg-tech-website/ --no-silent
