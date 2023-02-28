@@ -10,7 +10,5 @@ jobs:
     - uses: actions/checkout@v3
       with:
        token: ${{ secrets.ACCESS_TOKEN }}
-    - run: git config --global user.email "husam_shakeeb@hotmail.com"   
-    - run: git config --global user.name "husam-shakeeb"
     - run: npm ci
     - run: npx ng deploy --base-href=/srg-tech-website/ --no-silent
