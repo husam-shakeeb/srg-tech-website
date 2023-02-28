@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - some-branch
-env:
-  GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
 jobs:
   build:
