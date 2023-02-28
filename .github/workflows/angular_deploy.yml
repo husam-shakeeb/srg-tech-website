@@ -5,11 +5,8 @@ on:
       - master
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
-    name: Installing npm dependencies
     run: npm ci
     run: ng deploy --base-href=https://husam-shakeeb.github.io/srg-tech-website/
