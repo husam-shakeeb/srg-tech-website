@@ -1,0 +1,17 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - some-branch
+env:
+  GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+       token: ${{ secrets.ACCESS_TOKEN }}
+    - run: npm ci
+    - run: npx ng deploy --repo=https://github.com/husam-shakeeb/srg-tech-website.git --name="SRG-Tech" --email=noreply@srg-tech.com --no-silent
