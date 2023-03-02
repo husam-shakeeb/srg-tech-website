@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: npm ci
-    - run: npx ng deploy --repo=https://github.com/husam-shakeeb/srg-tech-website.git --base-href=/srg-tech-website --name="SRG-Tech" --email=noreply@srg-tech.com
+    - run: npx ng deploy --repo=https://github.com/husam-shakeeb/srg-tech-website.git --base-href=/srg-tech-website/ --name="SRG-Tech" --email=noreply@srg-tech.com
