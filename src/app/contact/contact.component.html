@@ -8,7 +8,7 @@
 </div>
 
 <div [formGroup]="contactForm" class="container pt-5">
-	<div class="row g-3 needs-validation">
+	<div class="row g-3">
 		<div class="col-md-4">
 			<label for="validationCustom00" class="form-label">Subject</label>
 			<input id="validationCustom00" type="text" class="form-control" formControlName="subject">
@@ -16,53 +16,28 @@
 		<div class="col-md-4">
 			<label for="validationCustom01" class="form-label">Name</label>
 			<input id="validationCustom01" type="text" class="form-control" formControlName="name">
+			
 		</div>
+		
 		<div class="col-md-4">
 			<label for="validationCustom02" class="form-label">Phone</label>
 			<input type="text" class="form-control" id="validationCustom02" formControlName="phone">
 		</div>
 		<div class="col-md-4">
 			<label for="validationCustomUsername" class="form-label">Email</label>
-			<input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+			<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
 				formControlName="email">
 		</div>
 		<div class="col-md-6">
 			<label for="validationCustom03" class="form-label">Company</label>
 			<input type="text" class="form-control" id="validationCustom03" formControlName="company">
-			<div class="invalid-feedback">
-				Please provide a valid city.
-			</div>
-		</div>
-		<div class="col-md-3">
-			<label for="validationCustom04" class="form-label">State</label>
-			<select class="form-select" id="validationCustom04" required>
-				<option selected disabled value="">Choose...</option>
-				<option>...</option>
-			</select>
-			<div class="invalid-feedback">
-				Please select a valid state.
-			</div>
 		</div>
 		<div class="col-md-3">
 			<label for="validationCustom05" class="form-label">Message</label>
 			<textarea type="text" class="form-control" id="validationCustom05"  formControlName="message"></textarea>
-			<div class="invalid-feedback">
-				Please provide a valid zip.
-			</div>
 		</div>
 		<div class="col-12">
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-				<label class="form-check-label" for="invalidCheck">
-					Agree to terms and conditions
-				</label>
-				<div class="invalid-feedback">
-					You must agree before submitting.
-				</div>
-			</div>
-		</div>
-		<div class="col-12">
-			<button (click)="logData()" class="btn btn-primary">Submit form</button>
+			<button (click)="sendEmail()" class="btn btn-primary">Submit form</button>
 		</div>
 	</div>
 
