@@ -13,6 +13,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     ImpressumComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule
