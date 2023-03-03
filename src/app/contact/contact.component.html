@@ -15,8 +15,8 @@
 		</div>
 		<div class="col-md-4">
 			<label for="validationCustom01" class="form-label">Name</label>
-			<input id="validationCustom01" type="text" class="form-control" formControlName="name">
-			
+			<input [ngStyle]="nameBorderStyle" id="validationCustom01" type="text" class="form-control" formControlName="name">
+			<div [ngStyle]="nameMessageStyle" [innerText]="nameMessageText"></div>
 		</div>
 		
 		<div class="col-md-4">

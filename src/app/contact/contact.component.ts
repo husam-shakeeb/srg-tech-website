@@ -17,9 +17,35 @@ export class ContactComponent {
     phone: new FormControl('')
   })
  
-
+  nameMessageText = ''
+  nameMessageStyle = {
+    'display': '',
+    'color': ''
+  }
+  nameBorderStyle = {
+    'border-color': '',
+    'box-shadow': '',
+  }
+  
   ngAfterViewInit() {
     emailjs.init("user_JBaPN7atg1zx0DWAoXtIA")
+
+    this.contactForm.controls.name.valueChanges.subscribe(value => {
+      this.nameMessageStyle.display = 'block'
+
+      if (!this.contactForm.controls.name.valid) {
+        this.nameBorderStyle['border-color'] = 'red'
+        this.nameBorderStyle['box-shadow'] = '0 0 0 0.2rem rgba(240,50,60,.25)'
+        this.nameMessageStyle.color = 'red'
+        this.nameMessageText = 'Not Valid'
+
+      } else {
+        this.nameBorderStyle['border-color'] = 'green'
+        this.nameBorderStyle['box-shadow'] = '0 0 0 0.2rem rgba(00,250,30,.25)'
+        this.nameMessageStyle.color = 'green'
+        this.nameMessageText = 'Valid'
+      }
+    })
   }
 
   sendEmail() {
