@@ -1,0 +1,11 @@
+.valid {
+	border-color:green;
+    box-shadow: 0 0 0 0.2rem rgba(50, 240, 75, 0.25);
+    color: 'green'        
+}
+
+.invalid {
+	border-color: red;
+    box-shadow: 0 0 0 0.2rem rgba(240,50,60,.25);
+    color: 'red'        
+}

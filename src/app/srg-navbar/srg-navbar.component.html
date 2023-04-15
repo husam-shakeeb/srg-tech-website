@@ -1,5 +1,5 @@
 <!-- added data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show  to collapse navbar on click-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom">
 	<div class="container">
 		<a class="navbar-brand" href="#">
 			<img src="assets\images\logo-02@2x.png" alt="" class="w-50">
@@ -10,12 +10,30 @@
 		</button>
 		<div class="collapse navbar-collapse justify-content-end fs-5" id="navbarNavAltMarkup">
 			<div class="navbar-nav">				
-				<!-- <a class="nav-link" routerLink="./home">Home</a> -->
-				<a class="nav-link" routerLink="./about">A<span class="red-bar">B</span>OUT</a>
-				<a class="nav-link" routerLink="./technologies">T<span class="red-bar">E</span>CHNOLOGIES</a>
-				<a class="nav-link" routerLink="./catalog">C<span class="red-bar">A</span>TALOG</a>
-				<a class="nav-link" routerLink="./contact">C<span class="red-bar">O</span>NTACT</a>
+				
+				<a class="nav-link" href="./about">A<span class="red-bar">B</span>OUT</a>
+				<a class="nav-link" href="./technologies">T<span class="red-bar">E</span>CHNOLOGIES</a>
+				<a class="nav-link" href="./catalog">C<span class="red-bar">A</span>TALOG</a>
+				<a class="nav-link" href="./contact">C<span class="red-bar">O</span>NTACT</a>
 			</div>
 		</div>
 	</div>
 </nav>
+
+<!-- <nav class="navbar navbar-expand-md navbar-light bg-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav ms-auto">
+				<a class="nav-link active" aria-current="page" href="./about">Home</a>
+				<a class="nav-link" href="./technologies">Features</a>
+				<a class="nav-link" href="./catalog">Pricing</a>
+				<a class="nav-link" tabindex="-1" aria-disabled="true" href="./contact">Disabled</a>
+			</div>
+		</div>
+	</div>
+</nav> -->

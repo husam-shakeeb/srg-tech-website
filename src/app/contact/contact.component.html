@@ -7,38 +7,45 @@
 	</div>
 </div>
 
-<div [formGroup]="contactForm" class="container pt-5">
+<div [formGroup]="contactForm" class="container py-5">
 	<div class="row g-3">
-		<div class="col-md-4">
-			<label for="validationCustom00" class="form-label">Subject</label>
-			<input id="validationCustom00" type="text" class="form-control" formControlName="subject">
-		</div>
-		<div class="col-md-4">
+		<h3 class="text-muted text-center py-3">Get in touch...</h3>
+		
+		<div class="col-md-3">
 			<label for="validationCustom01" class="form-label">Name</label>
-			<input [ngStyle]="nameBorderStyle" id="validationCustom01" type="text" class="form-control" formControlName="name">
-			<div [ngStyle]="nameMessageStyle" [innerText]="nameMessageText"></div>
+			<input [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.name.valid, 'invalid' : !contactForm.controls.name.valid && contactForm.controls.name.touched}" id="validationCustom01" type="text" formControlName="name">
+			<div [ngClass]="myMessageClass" [innerText]="nameMessageText" hidden></div>
 		</div>
 		
-		<div class="col-md-4">
+		<div class="col-md-3">
+			<label for="validationCustomUsername" class="form-label">Email</label>
+			<input type="text" [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.email.valid, 'invalid' : !contactForm.controls.email.valid && contactForm.controls.email.touched}" id="validationCustomUsername" aria-describedby="inputGroupPrepend" formControlName="email">
+		</div>
+		
+		<div class="col-md-3">
 			<label for="validationCustom02" class="form-label">Phone</label>
 			<input type="text" class="form-control" id="validationCustom02" formControlName="phone">
 		</div>
-		<div class="col-md-4">
-			<label for="validationCustomUsername" class="form-label">Email</label>
-			<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
-				formControlName="email">
-		</div>
-		<div class="col-md-6">
+
+		<div class="col-md-3">
 			<label for="validationCustom03" class="form-label">Company</label>
 			<input type="text" class="form-control" id="validationCustom03" formControlName="company">
 		</div>
-		<div class="col-md-3">
+
+		<div class="col-md-12">
+			<label for="validationCustom00" class="form-label">Subject</label>
+			<input id="validationCustom00" type="text" class="form-control" formControlName="subject">
+		</div>
+
+		<div class="col-md-12">
 			<label for="validationCustom05" class="form-label">Message</label>
-			<textarea type="text" class="form-control" id="validationCustom05"  formControlName="message"></textarea>
+			<textarea type="text" [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.message.valid, 'invalid' : !contactForm.controls.message.valid && contactForm.controls.message.touched}" id="validationCustom05" formControlName="message"></textarea>
 		</div>
-		<div class="col-12">
-			<button (click)="sendEmail()" class="btn btn-primary">Submit form</button>
+
+		<div class="col-6">
+			<button class="btn btn-outline-secondary" (click)="email.sendEmail(contactForm)">SEND</button>
 		</div>
+
 	</div>
 
-</div>
+</div>	
