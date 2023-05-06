@@ -12,14 +12,18 @@
 		<h3 class="text-muted text-center py-3">Get in touch...</h3>
 		
 		<div class="col-md-3">
-			<label for="validationCustom01" class="form-label">Name</label>
-			<input [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.name.valid, 'invalid' : !contactForm.controls.name.valid && contactForm.controls.name.touched}" id="validationCustom01" type="text" formControlName="name">
+			<label for="validationCustom01" class="form-label">Name *</label>
+			<input [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.name.valid, 
+			'invalid' : !contactForm.controls.name.valid && contactForm.controls.name.touched}" 
+			id="validationCustom01" type="text" formControlName="name">
 			<div [ngClass]="myMessageClass" [innerText]="nameMessageText" hidden></div>
 		</div>
 		
 		<div class="col-md-3">
-			<label for="validationCustomUsername" class="form-label">Email</label>
-			<input type="text" [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.email.valid, 'invalid' : !contactForm.controls.email.valid && contactForm.controls.email.touched}" id="validationCustomUsername" aria-describedby="inputGroupPrepend" formControlName="email">
+			<label for="validationCustomUsername" class="form-label">Email *</label>
+			<input type="text" [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.email.valid, 
+			'invalid' : !contactForm.controls.email.valid && contactForm.controls.email.touched}" 
+			id="validationCustomUsername" aria-describedby="inputGroupPrepend" formControlName="email">
 		</div>
 		
 		<div class="col-md-3">
@@ -38,12 +42,31 @@
 		</div>
 
 		<div class="col-md-12">
-			<label for="validationCustom05" class="form-label">Message</label>
-			<textarea type="text" [ngClass]="{'form-control' : true, 'valid' : contactForm.controls.message.valid, 'invalid' : !contactForm.controls.message.valid && contactForm.controls.message.touched}" id="validationCustom05" formControlName="message"></textarea>
+			<label for="validationCustom05" class="form-label">Message *</label>
+			<textarea type="text" [ngClass]="{'form-control' : true, 
+			'valid' : contactForm.controls.message.valid, 
+			'invalid' : !contactForm.controls.message.valid && contactForm.controls.message.touched}" 
+			id="validationCustom05" formControlName="message"></textarea>
 		</div>
 
+		<!-- <div class="col-6">
+			<button [ngClass]="{'btn':true, 'btn-outline-secondary': true,
+			'disabled' : !contactForm.valid && contactForm.touched,			
+			'enabled' : contactForm.valid}"
+			*ngIf='contactForm.valid' (click)="email.sendEmail(contactForm)">SEND</button>
+		</div> -->
+
 		<div class="col-6">
-			<button class="btn btn-outline-secondary" (click)="email.sendEmail(contactForm)">SEND</button>
+			<button class=" btn btn-outline-secondary"
+			routerLink="../emailsuccess"
+			(click)="email.sendEmail(contactForm) " 
+			*ngIf='contactForm.valid'>SEND</button>
+
+			<p class="text-danger"			 
+			*ngIf='!contactForm.valid'>* Please fill in the required fields</p>
+
+			<!-- <button class=" btn btn-outline-danger disabled"			 
+			*ngIf='!contactForm.valid'>SEND</button> -->
 		</div>
 
 	</div>

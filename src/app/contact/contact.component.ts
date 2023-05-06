@@ -18,10 +18,11 @@ export class ContactComponent {
     phone: new FormControl(''),
     company: new FormControl(''),
     subject: new FormControl(''),       
-    message: new FormControl('', Validators.required)
-    
+    message: new FormControl('', Validators.required)    
   })
 
+  
+  
   public get email() {
     return this._email
   }

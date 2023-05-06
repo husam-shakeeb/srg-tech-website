@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmailsuccessComponent } from './emailsuccess/emailsuccess.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CatalogComponent,
     ContactComponent,
     BottomComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    EmailsuccessComponent
   ],
   imports: [
     ReactiveFormsModule,

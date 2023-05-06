@@ -4,9 +4,10 @@ import * as emailjs from '@emailjs/browser'
 
 @Injectable ()
 export class EmailServiceService {
+  
 
   constructor() { 
-    emailjs.init("user_JBaPN7atg1zx0DWAoXtIA")
+    emailjs.init("user_JBaPN7atg1zx0DWAoXtIA")  
   }
   
   sendEmail(contactForm: FormGroup) {
@@ -20,17 +21,15 @@ export class EmailServiceService {
     }  
     
     if (!contactForm.valid) {
-      alert('Please make sure all required fields are filled and try again')
-      return
+      alert('Please make sure all required fields are filled and try again')    
     }   
-
     
-
     emailjs.send('service_neeb9kq', 'template_ap8u45n', templateParams)
       .then(function (response: any) {
-        console.log('SUCCESS!', response.status, response.text)
+        console.log('SUCCESS!', response.status, response.text)      
       }, function (error: any) {
-        console.log('FAILED...', error)
+        console.log('FAILED...', error)        
       })
+      
   }
 }
