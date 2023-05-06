@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,8 +13,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { ImpressumComponent } from './impressum/impressum.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { EmailsuccessComponent } from './emailsuccess/emailsuccess.component';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { EmailsuccessComponent } from './emailsuccess/emailsuccess.component';
     CatalogComponent,
     ContactComponent,
     BottomComponent,
-    ImpressumComponent,
-    EmailsuccessComponent
+    ImpressumComponent    
   ],
   imports: [
     ReactiveFormsModule,

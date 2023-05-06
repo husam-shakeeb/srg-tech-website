@@ -1,6 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TechnologiesComponent } from './technologies.component';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 describe('TechnologiesComponent', () => {
   let component: TechnologiesComponent;

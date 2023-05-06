@@ -3,9 +3,10 @@ import { FormGroup } from '@angular/forms';
 import * as emailjs from '@emailjs/browser'
 
 @Injectable ()
-export class EmailServiceService {
+export class EmailService {
   
 
+  
   constructor() { 
     emailjs.init("user_JBaPN7atg1zx0DWAoXtIA")  
   }
@@ -24,10 +25,10 @@ export class EmailServiceService {
       alert('Please make sure all required fields are filled and try again')    
     }   
     
-    emailjs.send('service_neeb9kq', 'template_ap8u45n', templateParams)
-      .then(function (response: any) {
-        console.log('SUCCESS!', response.status, response.text)      
-      }, function (error: any) {
+   return emailjs.send('service_neeb9kq', 'template_ap8u45n', templateParams)
+      .then( (response: any) => {
+        console.log('SUCCESS!', response.status, response.text)          
+      }, (error: any) => {
         console.log('FAILED...', error)        
       })
       
