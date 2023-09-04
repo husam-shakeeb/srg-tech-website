@@ -1,20 +1,28 @@
 .nav-link:active {
-	color:#FF1616;
+	color: #FF1616;
 }
 
 .nav-link:hover .red-bar {
+	transition-timing-function: ease-out;
+	transition: 0.4s;
 	text-decoration: overline 2px #FF1616;
+}
+
+.transform-text:hover {
+	scale: 1.05;
+	transition: ease-in-out 0.2s;
 }
 
 @media screen and (min-width: 992px) {
 	.nav-link {
 		border: 2px solid transparent;
 	}
+
 	.nav-link:active {
-		color:black;
+		color: black;
 	}
 }
 
 .bottom-border {
-	border-bottom: solid 3px #FF1616;
+	border-bottom: solid 3px #434343;
 }

@@ -1,0 +1,8 @@
+.red-hover:hover, .red-hover:active{
+	color: #FF1616;
+	font-weight: 600;	
+	transition-timing-function: ease-in-out;		
+	transition: 0.3s;
+	background-color: #434343;
+	transform:scale(1.05);
+}
