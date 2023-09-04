@@ -1,3 +1,7 @@
 .red-bar {
 	border-top: solid 4px #FF1616;
 }
+
+.left-border {
+	border-left: double 2px #ff1616;
+}
