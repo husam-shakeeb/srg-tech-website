@@ -25,7 +25,7 @@ export class EmailService {
       alert('Please make sure all required fields are filled and try again')    
     }   
     
-   return emailjs.send('service_neeb9kq', 'template_ap8u45n', templateParams)
+   return emailjs.send('service_5157qsd', 'template_ap8u45n', templateParams)
       .then( (response: any) => {
         console.log('SUCCESS!', response.status, response.text)          
       }, (error: any) => {
